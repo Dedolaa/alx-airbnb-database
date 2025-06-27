@@ -64,4 +64,6 @@ This document outlines the entity-relationship diagram (ERD) design for the Airb
 - Enum and check constraints ensure data validity.
 - Indexing on frequently queried fields (e.g., email, property_id, booking_id).
 
-Please refer to the accompanying `airbnb_erd.pdf` file in this directory for the visual representation of the ERD.
+[Download the ERD Diagram (PDF)](./airbnb_erd.pdf)
+
+Please download and open the PDF to view the complete entity-relationship diagram for the Airbnb database.
