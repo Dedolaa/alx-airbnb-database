@@ -1,27 +1,24 @@
-# Advanced SQL Queries – Airbnb Database
+# Aggregations and Window Functions – Airbnb Database
 
-This directory contains advanced SQL queries demonstrating JOINs and SUBQUERIES on the Airbnb schema.
+This file contains advanced SQL queries using aggregation and window functions for analysis purposes.
 
 ---
 
-## 📄 Files
+## 📄 File: `aggregations_and_window_functions.sql`
 
-### 1. `joins_queries.sql`
-- INNER JOIN: Bookings and Users
-- LEFT JOIN: Properties and Reviews (with `ORDER BY`)
-- FULL OUTER JOIN: Users and Bookings (PostgreSQL and MySQL-friendly version)
+### ✅ Query 1: Total Bookings per User
+- Uses `COUNT()` and `GROUP BY` to calculate the number of bookings per user.
 
-### 2. `subqueries.sql`
-- **Non-correlated subquery**: Finds properties with an average rating above 4.0.
-- **Correlated subquery**: Finds users who have made more than 3 bookings.
+### ✅ Query 2: Rank Properties by Booking Count
+- Uses the `RANK()` window function to order properties by number of bookings in descending order.
 
 ---
 
 ## ▶️ How to Run
 
-Make sure you’ve created the schema and inserted sample data.
+Ensure your database has schema and data loaded.
 
-Then execute the queries in your SQL client:
+Run the script using:
 
 ```sql
-\i joins_queries.sql      -- or subqueries.sql
+\i aggregations_and_window_functions.sql
