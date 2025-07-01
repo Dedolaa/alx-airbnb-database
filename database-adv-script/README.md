@@ -1,34 +1,27 @@
-# Advanced SQL Join Queries
+# Advanced SQL Queries – Airbnb Database
 
-## 📄 File: `joins_queries.sql`
-
-This script contains SQL queries using various types of **JOINs** to demonstrate relationships in the Airbnb database.
+This directory contains advanced SQL queries demonstrating JOINs and SUBQUERIES on the Airbnb schema.
 
 ---
 
-## 🔍 Queries Included
+## 📄 Files
 
-### 1. INNER JOIN – Users and Bookings
-Fetches all bookings and the users who made them. Only records with matches in both tables are returned.
+### 1. `joins_queries.sql`
+- INNER JOIN: Bookings and Users
+- LEFT JOIN: Properties and Reviews (with `ORDER BY`)
+- FULL OUTER JOIN: Users and Bookings (PostgreSQL and MySQL-friendly version)
 
-### 2. LEFT JOIN – Properties and Reviews
-Fetches all properties, including those with no reviews. This is helpful when analyzing unrated listings.
-
-### 3. FULL OUTER JOIN – All Users and Bookings
-Fetches:
-- All users, even if they have no bookings.
-- All bookings, even if not assigned to any user.
-
-📌 Note: Since MySQL does not support `FULL OUTER JOIN`, a UNION of `LEFT JOIN` and `RIGHT JOIN` is included as an alternative.
+### 2. `subqueries.sql`
+- **Non-correlated subquery**: Finds properties with an average rating above 4.0.
+- **Correlated subquery**: Finds users who have made more than 3 bookings.
 
 ---
 
 ## ▶️ How to Run
 
-1. Open your SQL client or terminal.
-2. Ensure you’ve already created the schema and inserted sample data.
-3. Run the script:
+Make sure you’ve created the schema and inserted sample data.
+
+Then execute the queries in your SQL client:
 
 ```sql
-\i joins_queries.sql      -- PostgreSQL
-SOURCE joins_queries.sql  -- MySQL
+\i joins_queries.sql      -- or subqueries.sql
