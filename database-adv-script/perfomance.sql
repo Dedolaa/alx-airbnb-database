@@ -1,6 +1,6 @@
-
 -- ========================================
 -- INITIAL QUERY (Unoptimized)
+-- Includes WHERE and AND
 -- ========================================
 EXPLAIN ANALYZE
 SELECT 
@@ -26,6 +26,7 @@ WHERE b.status = 'confirmed' AND p.location = 'Lagos';
 
 -- ========================================
 -- REFACTORED QUERY (Optimized)
+-- Uses LEFT JOIN and only necessary columns
 -- ========================================
 EXPLAIN ANALYZE
 SELECT 
